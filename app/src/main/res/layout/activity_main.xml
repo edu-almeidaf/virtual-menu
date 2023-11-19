@@ -26,8 +26,9 @@
         android:layout_marginBottom="30dp"
         android:text="@string/main_title_text"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp" />
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/main_menu"
