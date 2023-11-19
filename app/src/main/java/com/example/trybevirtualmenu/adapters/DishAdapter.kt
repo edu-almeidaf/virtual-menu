@@ -22,6 +22,12 @@ class DishAdapter(val dishes: List<Dish>) : Adapter<DishAdapter.DishViewHolder>(
         RecyclerView.ViewHolder(view) {
         val image: ShapeableImageView = view.findViewById(R.id.item_menu_image)
         val name: MaterialTextView = view.findViewById(R.id.item_menu_name)
+
+        init {
+            view.setOnClickListener {
+                dishListener?.onDishClick(view, adapterPosition)
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DishViewHolder {
